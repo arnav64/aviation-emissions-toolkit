@@ -1,3 +1,11 @@
+"""
+Loads BTS Airline On-Time Performance data for a given year/month.
+Source: https://transtats.bts.gov/PREZIP/
+        On_Time_Reporting_Carrier_On_Time_Performance_1987_present_{year}_{month}.zip
+
+Returns tail_number, air_time, taxi_out, taxi_in (all times in minutes).
+Cancelled and diverted flights with no AirTime are dropped.
+"""
 import pandas as pd
 from pathlib import Path
 
