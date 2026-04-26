@@ -1,3 +1,12 @@
+"""
+Builds a tail-number → engine/aircraft mapping from the FAA Releasable Aircraft database.
+Source: https://registry.faa.gov/database/ReleasableAircraft.zip
+
+Joins three FAA files:
+  MASTER.txt  — tail → FAA engine code + aircraft model code
+  ENGINE.txt  — FAA engine code → engine model name (used to match ICAO)
+  ACFTREF.txt — aircraft model code → manufacturer, model, seat count
+"""
 import pandas as pd
 from pathlib import Path
 

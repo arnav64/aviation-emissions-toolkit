@@ -1,3 +1,13 @@
+"""
+Matches FAA engine codes to ICAO Engine Exhaust Emissions Databank (EEDB v32) entries
+and returns per-phase LTO emission rates (kg/s) for HC, CO, NOx, and CO2.
+Source: https://www.icao.int/environmental-protection/Pages/EEDB.aspx
+
+Matching uses a 4-tier name cascade — exact → strip-series-suffix → prefix →
+slash-stripped — plus a manual override table for known naming mismatches
+(RB211/Trent rebranding, spacing differences, certification suffix variations).
+Rates are averaged across all matched ICAO variants for the same FAA engine code.
+"""
 import numpy as np
 import pandas as pd
 from pathlib import Path
