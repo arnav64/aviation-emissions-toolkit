@@ -25,10 +25,12 @@ Our methodology has been formally adopted and cited by **9 independent academic 
 ## 🔄 Evolution & Maintenance
 This repository serves as the modernized, actively maintained successor to [AirlineEmissionCalculations](https://github.com/landonbutler/AirlineEmissionCalculations/tree/main), originally developed by Landon G. Butler. 
 
-**Key Updates for 2026:**
-* **Data Modernization:** Updated to process the latest available BTS and FAA data streams, ensuring alignment with current industry standards.
-* **Modular Architecture:** Refactored for scalability, allowing researchers to integrate disparate datasets (e.g., ICAO Engine Emissions Databank, EUROCONTROL BADA) with minimal overhead.
-* **Reproducibility:** Updated dependencies and added end-to-end notebooks, ensuring that findings can be validated by external auditors and policymakers.
+### Key Updates for 2026
+
+* **Temporal Modernization (2021–2026):** Fully migrated from 2021 baselines to 2026-current data streams (BTS/FAA), ensuring the framework is calibrated to the latest industry metrics and policy standards.
+* **Modular Performance:** Transitioned to a decoupled, modular processing pipeline. By isolating dataset handling, the toolkit now achieves significantly higher computational speed and data reliability compared to monolithic legacy approaches.
+* **AI-Native Research Workflow:** Integrated `claude.md` specifications, optimizing the codebase for interoperability with AI research agents, allowing for autonomous, large-scale emissions analysis.
+* **Reproducibility:** Updated dependencies and validated end-to-end notebooks, ensuring that findings meet the rigorous standards required by external auditors and policymakers.
 
 ## Repository Structure
 - `src/` – Core modules for emissions calculation and data fusion.
