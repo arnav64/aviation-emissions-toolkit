@@ -18,7 +18,7 @@ This methodology originated from award-winning research at the **10th Internatio
 
 > 🏆 **Best Paper Award: Economics, Policy, and Equity**
 > *Democratizing Aviation Emissions Estimation: Development of an Open-Source, Data-Driven Methodology* > **Authors:** Andy G. Eskenazi, Landon G. Butler, **Arnav P. Joshi**, Megan S. Ryerson
-> [**View Official 2022 ICRAT Award Results**](https://www.icrat.org/previous-conferences/10th-international-conference/papers/)
+> [**View Official ICRAT Award Results**](https://www.icrat.org/previous-conferences/10th-international-conference/papers/)
 
 Our methodology has been formally adopted and cited by **9 independent academic publications**, demonstrating its role as a recognized standard in environmental accounting for the aviation sector.
 
