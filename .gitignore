@@ -5,7 +5,7 @@ results/*.zip
 # Data files (too large for GitHub — download separately)
 data/*
 !data/.gitkeep
-!data/README.md
+!data/SOURCES.md
 !data/download_bts.py
 
 # Byte-compiled / optimized / DLL files
