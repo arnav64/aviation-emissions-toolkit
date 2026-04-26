@@ -214,7 +214,7 @@ def _rates_from_icao_row(row):
 # Returns one row per faa_engine_code with columns:
 #   - faa_engine_code    : int — FAA engine code, e.g. 13078
 #   - match_type         : str — how the ICAO match was made, e.g. 'exact', 'prefix', 'no_match'
-#   - HC T/O (kg)        : float — HC emissions at takeoff (total kg over 42s phase)
+#   - HC T/O (kg/s)      : float — HC emission rate at takeoff
 #   - HC C/O (kg/s)      : float — HC emissions rate at climb-out
 #   - HC App (kg/s)      : float — HC emissions rate at approach
 #   - HC Idle (kg/s)     : float — HC emissions rate at idle (taxi)
