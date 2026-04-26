@@ -4,7 +4,7 @@ import pandas as pd
 from pathlib import Path
 from typing import Optional
 
-DATA_DIR = Path(__file__).parent.parent / 'new_data'
+DATA_DIR = Path(__file__).parent.parent / 'data'
 
 # Rules: (mfr_pattern, model_pattern, bada_standard_code)
 # Applied in order; first match wins. Both patterns are matched case-insensitively via re.search.
