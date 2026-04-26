@@ -1,3 +1,11 @@
+# Results output (large CSVs)
+results/*.csv
+results/*.zip
+
+# Data files (too large for GitHub — download separately)
+data/*
+!data/.gitkeep
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

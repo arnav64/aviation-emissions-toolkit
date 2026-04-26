@@ -1,7 +1,7 @@
 import pandas as pd
 from pathlib import Path
 
-DATA_DIR = Path(__file__).parent.parent / 'new_data'
+DATA_DIR = Path(__file__).parent.parent / 'data'
 
 # Load FAA MASTER.txt and return one row per tail with its FAA engine code
 # and aircraft model code.

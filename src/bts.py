@@ -1,7 +1,7 @@
 import pandas as pd
 from pathlib import Path
 
-DATA_DIR = Path(__file__).parent.parent / 'new_data'
+DATA_DIR = Path(__file__).parent.parent / 'data'
 
 # Load BTS Airline On-Time Performance data for a given year and month.
 #

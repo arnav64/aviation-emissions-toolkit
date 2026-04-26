@@ -3,7 +3,7 @@ import pandas as pd
 from pathlib import Path
 from .faa import _load_engine_ref
 
-DATA_DIR = Path(__file__).parent.parent / 'new_data'
+DATA_DIR = Path(__file__).parent.parent / 'data'
 
 _CO2_PER_KG_FUEL = 3.16  # kg CO2 per kg jet-A fuel (ICAO standard)
 
