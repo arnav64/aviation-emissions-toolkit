@@ -1,15 +1,39 @@
 cff-version: 1.2.0
-message: "If you use this software in academic or applied research, please cite it as follows."
+message: "If you use this software, please cite both the software and the associated conference paper."
+type: software
 title: "Aviation Emissions Toolkit"
 authors:
   - family-names: "Joshi"
     given-names: "Arnav"
+  - family-names: "Eskenazi"
+    given-names: "Andy"
+  - family-names: "Butler"
+    given-names: "Landon"
+  - family-names: "Ryerson"
+    given-names: "Megan"
+identifiers:
+  - type: url
+    value: "https://github.com/arnav64/aviation-emissions-toolkit"
 date-released: 2026-01-31
-url: "https://github.com/arnav64/aviation-emissions-toolkit"
+license: MIT
 keywords:
   - aviation
   - emissions
   - transportation systems
   - climate modeling
   - open-source
-license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "Democratizing Aviation Emissions Estimation: Development of an Open-Source, Data-Driven Methodology"
+  authors:
+    - family-names: "Eskenazi"
+      given-names: "Andy"
+    - family-names: "Butler"
+      given-names: "Landon"
+    - family-names: "Joshi"
+      given-names: "Arnav"
+    - family-names: "Ryerson"
+      given-names: "Megan"
+  conference:
+    name: "10th International Conference on Research in Air Transportation (ICRAT)"
+  year: 2022
