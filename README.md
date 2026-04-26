@@ -8,9 +8,10 @@
 ---
 
 ## 🏛️ Alignment with U.S. National Priorities
-This toolkit provides the high-fidelity computational framework required to monitor and execute the **U.S. Aviation Climate Action Plan’s 2050 Net-Zero mandate**. By enabling reproducible, system-wide emissions tracking, this project supports:
-* **The U.S. National Blueprint for Transportation Decarbonization:** Providing empirical evidence for net-zero policy decisions.
-* **DOT/FAA Sustainability Goals:** Enhancing transparency in carbon and non-CO2 climate impact monitoring for the domestic aviation fleet.
+This toolkit provides the high-fidelity computational framework required to support and execute current federal decarbonization mandates:
+
+* **[U.S. Aviation Climate Action Plan](https://www.transportation.gov/priorities/climate-change/us-aviation-climate-action-plan):** This toolkit directly supports the 2050 Net-Zero goal for the U.S. aviation sector by providing the reproducible emissions accounting methodology necessary for industry-wide adoption.
+* **[U.S. National Blueprint for Transportation Decarbonization](https://www.energy.gov/eere/us-national-blueprint-transportation-decarbonization):** By standardizing emissions estimation, this toolkit aligns with the Blueprint’s whole-of-government strategy to transform the transportation sector and eliminate greenhouse gas emissions by 2050.
 
 ## 🏆 Recognition & Impact
 This methodology originated from award-winning research at the **10th International Conference on Research in Air Transportation (ICRAT)**, co-organized by the FAA and EUROCONTROL.
