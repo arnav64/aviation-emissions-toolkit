@@ -34,8 +34,7 @@ This repository serves as the modernized, actively maintained successor to [Airl
 
 ## Repository Structure
 - `src/` – Core modules for emissions calculation and data fusion.
-- `examples/` – Runnable notebooks demonstrating reproducible emissions estimation.
-- `docs/` – Methodology documentation aligned with established aviation climate research.
+- `data/` – Instructions on downloading open-source data for emissions calculation provided by US and European federal agencies.
 
 ## Citation
 If you utilize this toolkit in your research or policy analysis, please cite our ICRAT methodology:
