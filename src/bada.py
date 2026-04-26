@@ -1,3 +1,11 @@
+"""
+Maps FAA aircraft types to BADA standard codes and interpolates CCD (cruise/climb/descent)
+emissions from the Engine Fuel Consumption table.
+
+Aircraft type matching uses a rule table of (manufacturer pattern, model pattern) regexes
+applied in order — first match wins. Emissions are linearly interpolated against BADA
+duration checkpoints for each aircraft type, clamped at the table boundaries.
+"""
 import re
 import numpy as np
 import pandas as pd
