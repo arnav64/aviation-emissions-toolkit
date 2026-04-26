@@ -17,15 +17,16 @@ This toolkit provides the high-fidelity computational framework required to supp
 This methodology originated from award-winning research at the **10th International Conference on Research in Air Transportation (ICRAT)**, co-organized by the FAA and EUROCONTROL.
 
 > 🏆 **Best Paper Award: Economics, Policy, and Equity**
-> *Democratizing Aviation Emissions Estimation: Development of an Open-Source, Data-Driven Methodology* > **Authors:** Andy G. Eskenazi, Landon G. Butler, **Arnav P. Joshi**, Megan S. Ryerson.
+> *Democratizing Aviation Emissions Estimation: Development of an Open-Source, Data-Driven Methodology* > **Authors:** Andy G. Eskenazi, Landon G. Butler, **Arnav P. Joshi**, Megan S. Ryerson
+> [**View Official 2022 ICRAT Award Results**](https://www.icrat.org/previous-conferences/10th-international-conference/papers/)
 
 Our methodology has been formally adopted and cited by **9 independent academic publications**, demonstrating its role as a recognized standard in environmental accounting for the aviation sector.
 
 ## 🔄 Evolution & Maintenance
-This repository serves as the modernized, actively maintained successor to previous open-source research work in aviation emissions estimation (originally initiated by Landon G. Butler). 
+This repository serves as the modernized, actively maintained successor to [AirlineEmissionCalculations](https://github.com/landonbutler/AirlineEmissionCalculations/tree/main), originally developed by Landon G. Butler. 
 
 **Key Updates for 2026:**
-* **Data Modernization:** Updated to process the latest available BTS and FAA data streams.
+* **Data Modernization:** Updated to process the latest available BTS and FAA data streams, ensuring alignment with current industry standards.
 * **Modular Architecture:** Refactored for scalability, allowing researchers to integrate disparate datasets (e.g., ICAO Engine Emissions Databank, EUROCONTROL BADA) with minimal overhead.
 * **Reproducibility:** Updated dependencies and added end-to-end notebooks, ensuring that findings can be validated by external auditors and policymakers.
 
