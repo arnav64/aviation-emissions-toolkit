@@ -29,6 +29,7 @@ DATA_DIR = Path(__file__).parent.parent / 'data'
 #   - dest             : str   — destination airport IATA code, e.g. 'LAX'
 #   - dest_city        : str   — destination city and state, e.g. 'Los Angeles, CA'
 #   - dest_state       : str   — destination state abbreviation, e.g. 'CA'
+#   - distance_miles   : float — airport-pair distance in statute miles, e.g. 2475.0
 #
 # Rows missing air_time (cancelled / diverted flights) are dropped.
 def load_bts_ontime(year: int, month: int) -> pd.DataFrame:
@@ -47,7 +48,8 @@ def load_bts_ontime(year: int, month: int) -> pd.DataFrame:
         path,
         usecols=['Tail_Number', 'AirTime', 'TaxiIn', 'TaxiOut',
                  'Origin', 'OriginCityName', 'OriginState',
-                 'Dest', 'DestCityName', 'DestState'],
+                 'Dest', 'DestCityName', 'DestState',
+                 'Distance'],
         low_memory=False,
     )
     df = df.dropna(subset=['AirTime'])
@@ -62,6 +64,7 @@ def load_bts_ontime(year: int, month: int) -> pd.DataFrame:
         'Dest':           'dest',
         'DestCityName':   'dest_city',
         'DestState':      'dest_state',
+        'Distance':       'distance_miles',
     })
     df['tail_number'] = df['tail_number'].astype(str).str.strip()
     return df.reset_index(drop=True)
