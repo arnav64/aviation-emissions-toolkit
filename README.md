@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Citation Count](https://img.shields.io/badge/Cited%20by-9-green.svg)](https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7178136927124764561&as_sdt=5)
+[![Emissions Map](https://img.shields.io/badge/Live%20Map-View%20Visualization-orange)](https://arnav64.github.io/aviation-emissions-toolkit/)
 
 **An open-source, data-driven framework for system-wide aviation emissions accounting, designed to support transparency in climate impact assessment and U.S. infrastructure optimization.**
 
