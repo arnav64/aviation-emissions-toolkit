@@ -38,9 +38,12 @@ python viz/build_viz.py
 
 # Force-refresh the airport coordinates cache
 python viz/build_viz.py --refresh
+
+# Build the results dashboard reproducing the ICRAT paper's figures (generates docs/dashboard.html)
+python viz/build_dashboard.py
 ```
 
-`viz/build_viz.py` reads `results/OnTimeEmissions{year}_{month}.csv`, downloads US airport coordinates from OurAirports (cached at `viz/airports.csv`), aggregates emissions by route and airport, and writes a self-contained Plotly HTML to `docs/index.html`.
+`viz/build_viz.py` reads `results/OnTimeEmissions{year}_{month}.csv`, downloads US airport coordinates from OurAirports (cached at `viz/airports.csv`), aggregates emissions by route and airport, and writes a self-contained Plotly HTML to `docs/index.html`. `viz/build_dashboard.py` reads the same results CSV and reproduces the ICRAT paper's key figures (airline CO2/seat-mile ranking, LTO/CCD greenhouse gas breakdown, distance-emissions relationships) to `docs/dashboard.html`.
 
 To publish: enable GitHub Pages in repo Settings → Pages → Source: main branch, `/docs` folder.
 

@@ -289,6 +289,13 @@ def build_html(fig: go.Figure, airports_geo: pd.DataFrame,
       gap: 14px;
       flex-wrap: wrap;
     }}
+    #hdr .dash-link {{
+      margin-left: auto;
+      font-size: 12px;
+      font-weight: 600;
+      color: #2e7d32;
+      white-space: nowrap;
+    }}
     #hdr h1 {{
       font-size: 18px;
       font-weight: 700;
@@ -477,6 +484,7 @@ def build_html(fig: go.Figure, airports_geo: pd.DataFrame,
     Bubble size &amp; color proportional to airport CO&#8322; throughput &bull;
     Hover for details
   </div>
+  <a class="dash-link" href="dashboard.html">Results Dashboard &rarr;</a>
 </div>
 
 <div id="body">
