@@ -327,6 +327,17 @@ def build_html() -> str:
     #map-body {{ flex-direction: column; }}
     #map-sidebar {{ width: 100%; border-left: none; border-top: 1px solid {BORDER}; }}
   }}
+
+  @media print {{
+    body {{ background: #fff; }}
+    header .tabs {{ display: none; }}
+    #map-body {{ flex-direction: column; border: none; }}
+    #map-wrap, #map-sidebar {{ width: 100%; }}
+    #map-sidebar {{ border-left: none; border-top: 1px solid {BORDER}; }}
+    #mapView {{ height: 480px; }}
+    .ap-list {{ overflow-y: visible; max-height: none; }}
+    .panel, .kpi, .m-stat, .ap-row, .blk {{ break-inside: avoid; page-break-inside: avoid; }}
+  }}
 </style>
 </head>
 <body>
@@ -420,6 +431,10 @@ function renderChart(id) {{
   charts[id] = null; // free the reference once rendered
   rendered[id] = true;
 }}
+
+window.addEventListener("beforeprint", function() {{
+  Object.keys(rendered).forEach(function(id) {{ Plotly.Plots.resize(id); }});
+}});
 
 function showView(viewId, btn) {{
   document.querySelectorAll(".view").forEach(function(v) {{ v.classList.remove("active"); }});
