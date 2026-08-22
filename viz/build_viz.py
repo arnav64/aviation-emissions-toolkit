@@ -1,6 +1,9 @@
 """
-Generates docs/index.html — an interactive Plotly map of U.S. aviation emissions
-by origin-destination airport pair.
+Builds an interactive Plotly map of U.S. aviation emissions by origin-destination
+airport pair. The map itself lives as the "Route Map" view inside
+docs/dashboard.html (built by build_dashboard.py, which imports the functions
+below); this script's own docs/map_standalone.html output is a standalone
+fallback, not the published page.
 
 Usage:
     python viz/build_viz.py                        # auto-detects newest results CSV
@@ -9,7 +12,7 @@ Usage:
 
 Reads:   results/OnTimeEmissions*.csv (newest by default)
 Fetches: viz/airports.csv (cached from OurAirports on first run)
-Writes:  docs/index.html
+Writes:  docs/map_standalone.html
 
 Supports both pipeline formats:
   Legacy:  Origin, Dest, OriginCityName, DestCityName, Total CO2, Total CO2E
@@ -30,7 +33,7 @@ import requests
 ROOT = Path(__file__).parent.parent
 AIRPORTS_CSV = Path(__file__).parent / "airports.csv"
 DOCS_DIR = ROOT / "docs"
-OUTPUT_HTML = DOCS_DIR / "index.html"
+OUTPUT_HTML = DOCS_DIR / "map_standalone.html"
 RESULTS_DIR = ROOT / "results"
 
 AIRPORTS_URL = "https://ourairports.com/data/airports.csv"
