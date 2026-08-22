@@ -8,41 +8,9 @@
 
 ---
 
-## 🏛️ Key Motivation
-This toolkit provides the high-fidelity computational framework required to support and execute current federal decarbonization mandates:
+Estimates LTO and cruise-climb-descent (CCD) emissions for every commercial flight in a BTS on-time dataset by joining FAA aircraft registry data, ICAO engine emissions indices, and BADA fuel consumption tables. Outputs per-flight CO₂, CO₂e, HC, CO, and NOx. Covers ~88.7% of BTS rows after data-quality filtering.
 
-* **[U.S. Aviation Climate Action Plan](https://www.transportation.gov/priorities/climate-change/us-aviation-climate-action-plan):** This toolkit directly supports the 2050 Net-Zero goal for the U.S. aviation sector by providing the reproducible emissions accounting methodology necessary for industry-wide adoption.
-* **[U.S. National Blueprint for Transportation Decarbonization](https://www.energy.gov/eere/us-national-blueprint-transportation-decarbonization):** By standardizing emissions estimation, this toolkit aligns with the Blueprint’s whole-of-government strategy to transform the transportation sector and eliminate greenhouse gas emissions by 2050.
-
-## 🏆 Recognition & Impact
-This methodology originated from award-winning research at the **10th International Conference on Research in Air Transportation (ICRAT)**, co-organized by the FAA and EUROCONTROL.
-
-> 🏆 **Best Paper Award: Economics, Policy, and Equity**
-> *Democratizing Aviation Emissions Estimation: Development of an Open-Source, Data-Driven Methodology* > **Authors:** Andy G. Eskenazi, Landon G. Butler, **Arnav P. Joshi**, Megan S. Ryerson
-> [**View Official ICRAT Award Results**](https://www.icrat.org/previous-conferences/10th-international-conference/papers/)
-
-Our methodology has been formally adopted and cited by **9 independent academic publications**, demonstrating its role as a recognized standard in environmental accounting for the aviation sector.
-
-### 📖 Research Documentation
-
-This methodology was developed and peer-reviewed for the 10th ICRAT. You can access the full research paper via the open-access preprint:
-
-[**Read the Full Paper on arXiv**](https://arxiv.org/abs/2202.11208)
-
-## 🔄 Evolution & Maintenance
-This repository serves as the modernized, actively maintained successor to [AirlineEmissionCalculations](https://github.com/landonbutler/AirlineEmissionCalculations/tree/main), originally developed by Landon G. Butler. 
-
-### Key Updates for 2026
-
-* **Temporal Modernization (2021–2026):** Fully migrated from 2021 baselines to 2026-current data streams (BTS/FAA), ensuring the framework is calibrated to the latest industry metrics and policy standards.
-* **Modular Performance:** Transitioned to a decoupled, modular processing pipeline. By isolating dataset handling, the toolkit now achieves significantly higher computational speed and data reliability compared to monolithic legacy approaches.
-* **Reproducibility:** Updated dependencies and validated end-to-end pipelines, ensuring that findings meet the rigorous standards required by external auditors and policymakers.
-
-## Repository Structure
-- `src/` – Core modules for emissions calculation and data fusion.
-- `data/` – Instructions on downloading open-source data for emissions calculation provided by US and European federal agencies.
-- `viz/` – Visualization scripts for building the interactive emissions map.
-- `examples/` – Example scripts for single flights, monthly batches, and city-pair analysis.
+This methodology was developed for the [10th International Conference on Research in Air Transportation (ICRAT)](https://arxiv.org/abs/2202.11208) and is an actively maintained successor to [AirlineEmissionCalculations](https://github.com/landonbutler/AirlineEmissionCalculations/tree/main).
 
 ## Getting Started
 
@@ -97,6 +65,13 @@ Each module is independent and returns a DataFrame:
 | `time_ccd` | `air_time (min) − (42 + 132 + 240) / 60` | Flight time above 3,000 ft |
 | GWPs (CO2-equivalent) | HC = 84, CO = 1.57, NOx = 298 | Used for `co2e_total` |
 
+## Repository Structure
+
+- `src/` – Core pipeline modules.
+- `data/` – Data download scripts and source documentation.
+- `viz/` – Interactive emissions map builder.
+- `examples/` – Single-flight, monthly batch, and city-pair analysis scripts.
+
 ## Data Sources
 
 See `data/SOURCES.md` for download links. Expected files in `data/`:
@@ -111,7 +86,6 @@ See `data/SOURCES.md` for download links. Expected files in `data/`:
 | `Engine Fuel Consumption.xlsx` | BADA CCD table: fuel + emissions by aircraft type and flight duration |
 
 ## Citation
-If you utilize this toolkit in your research or policy analysis, please cite our ICRAT methodology:
 
 ```bibtex
 @inproceedings{eskenazi2022democratizing,
@@ -120,3 +94,4 @@ If you utilize this toolkit in your research or policy analysis, please cite our
   booktitle={10th International Conference on Research in Air Transportation (ICRAT)},
   year={2022}
 }
+```
