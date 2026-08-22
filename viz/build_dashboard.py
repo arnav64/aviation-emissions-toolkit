@@ -215,14 +215,26 @@ def fig_lto_ccd_ghg(df: pd.DataFrame) -> go.Figure:
     return fig
 
 
+PIPELINE_COVERAGE_PCT = 88.7
+"""
+Documented match rate of the current pipeline (src/bts.py -> faa.py -> icao.py ->
+bada.py -> calculate_emissions.py), per that module's own code comments and print
+output. NOT recomputed from ANALYSIS_CSV: that file is a legacy-format output
+(predates the current modular pipeline) that keeps every BTS row -- including
+cancelled flights -- and nulls out Total CO2 for unmatched ones rather than
+dropping the row, so a naive notna() count on it isn't a like-for-like match rate
+against the documented figure. Use the one real, current-pipeline number
+everywhere instead of computing a second, methodologically different one.
+"""
+
+
 def build_html() -> str:
     map_fig, map_rows_html, map_stats, map_period = build_map_view()
 
     df = load_analysis_data()
-    total_rows = len(df)
     em = df.dropna(subset=["Total CO2"])
     em = em[(em["Number Seats"] > 0) & (em["Distance"] > 0)]
-    coverage_pct = 100 * len(em) / total_rows
+    coverage_pct = PIPELINE_COVERAGE_PCT
     total_co2e_kt = em["Total CO2E"].sum() / 1e6
 
     figs = {
@@ -357,7 +369,7 @@ def build_html() -> str:
     <div class="period-note">{ANALYSIS_PERIOD} &middot; matches the ICRAT 2022 paper's analysis period &middot; reproduces its key figures/table from this repo's real computed output</div>
     <div class="kpi-row">
       <div class="kpi"><div class="n">{len(em):,}</div><div class="l">Flights with computed emissions</div></div>
-      <div class="kpi"><div class="n">{coverage_pct:.1f}%</div><div class="l">Of BTS on-time rows retained after data-quality filtering</div></div>
+      <div class="kpi"><div class="n">{coverage_pct:.1f}%</div><div class="l">Of BTS on-time flight rows successfully matched to aircraft, engine, and emissions data</div></div>
       <div class="kpi"><div class="n">{total_co2e_kt:,.0f} kt</div><div class="l">Total CO&#8322;e emitted</div></div>
       <div class="kpi"><div class="n">17</div><div class="l">U.S. mainline + regional carriers covered</div></div>
     </div>
